@@ -27,15 +27,15 @@ Kalau dosen memperbaiki sesuatu di pertemuan yang sudah dirilis (mis. ada bug di
 Bagian di bawah ini **isi bertahap** sesuai level yang sedang kalian kerjakan (lihat `pertemuan-01/SOAL.md`) — heading-nya dicek otomatis, jangan diganti namanya.
 
 ## Identitas
-- Nama: (tulis di sini)
-- NRP: (tulis di sini)
-- Kelas: (tulis di sini)
+- Nama: Kadek Angga Wistara
+- NRP: 5053241025
+- Kelas: M
 
 ## Commit vs Push
-(tulis di sini)
+Ketika kita melakukan commit, file yang kita commit hanya masih berada di staging stage. artinya "ready untuk di push" tetapi belum di push. jadi file tersebut belum ada di repo, masih berada di local. Sedangkann jika file di push maka 
 
 ## Reproducibility
-(tulis di sini)
+Jika kode yang ada di GO versi terbaru menggunakan syntax atau fitur yang hanya ada di GO versi terbaru tersebut. Maka jika menjalankan kode tersebut dengan versi GO yang lama, kemungkinan akan terjadi syntax error. Tetapi jika kode di versi terbaru tidak ada menggunakan hal baru juga, maka hal tersebut tidak akan menjadi sebuah masalah
 
 ## Catatan Merge Conflict
 (tulis di sini)
