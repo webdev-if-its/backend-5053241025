@@ -27,7 +27,10 @@ func HitungTotalPesanan(qty []int, hargaSatuan []float64) float64 {
 }
 
 func TerapkanPajak(total float64, tarifPajak float64) float64 {
+	var hasil float64
 
+	hasil = total + (total * tarifPajak)
+	return hasil
 }
 
 func HitungDiskon(total float64) float64 {
