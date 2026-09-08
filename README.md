@@ -38,10 +38,10 @@ Ketika kita melakukan commit, file yang kita commit hanya masih berada di stagin
 Jika kode yang ada di GO versi terbaru menggunakan syntax atau fitur yang hanya ada di GO versi terbaru tersebut. Maka jika menjalankan kode tersebut dengan versi GO yang lama, kemungkinan akan terjadi syntax error. Tetapi jika kode di versi terbaru tidak ada menggunakan hal baru juga, maka hal tersebut tidak akan menjadi sebuah masalah
 
 ## Catatan Merge Conflict
-(tulis di sini)
+Yang bentrok ada di line 30, karena ada 2 versi berbeda di line yang sama, git jadi bingung mana versi yang benar. Jadi perlu bantuan manusia untuk memutuskan mana versi yang benar
 
 ## Kenapa .gitignore Penting
-(tulis di sini)
+Karena jika didalam 1 tim ada beberapa IDE berbeda, file config dari 1 IDE kemungkinan akan overwrite file config dari IDE berbeda. Yang dimana file config tersebut bisa saja ada hardcoded windows file paths yang tidak ada di computer rekan 1 tim yang menggunakan  IDE berbeda itu
 
 ## Refleksi
-(tulis di sini)
+Saya bingung tentang merge conflict, kenapa  terjadi merge conflict dan bagaimana cara mengatasinya? setelah saya  mencari  tahu  dan melakukannya  sendiri, saya akhirnya tau kenapa dan bagaimana.
