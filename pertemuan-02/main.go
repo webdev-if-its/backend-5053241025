@@ -79,7 +79,12 @@ func TentukanStatus(total float64) string {
 }
 
 func RingkasanPesanan(qty []int, hargaSatuan []float64, tarifPajak float64) string {
-	panic("belum diimplementasikan")
+	subtotal := HitungTotalPesanan(qty, hargaSatuan)
+	diskon := HitungDiskon(subtotal)
+	totalAkhir := TotalSetelahDiskon(qty, hargaSatuan, tarifPajak)
+	status := TentukanStatus(totalAkhir)
+
+	return fmt.Sprintf("Subtotal awalnya : %.2f\nDapat diskon: %.2f\nJadi total akhirnya: %.2f\n%s", subtotal, diskon, totalAkhir, status)
 }
 
 // TODO(Level 9): signature ini SUDAH benar (cari tahu sendiri kenapa
