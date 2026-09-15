@@ -103,7 +103,6 @@ func HitungOngkosKirim(beratKg float64, jarakKm float64) (float64, error) {
 		return 0, errors.New("berat dan jarak tidak boleh negatif")
 	}
 
-	// Tarif dasar pengiriman: Rp10.000 per kilogram dan Rp1.000 per kilometer.
 	return (beratKg * 2000.0) + (jarakKm * 3000.0), nil
 }
 
