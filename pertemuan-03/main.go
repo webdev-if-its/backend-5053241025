@@ -34,8 +34,9 @@ type TokoTugas struct {
 
 func TambahTugas(toko *TokoTugas, judul string) (Task, error) {
 	tugas := Task{
-		ID:    toko.NextID + 1,
-		Judul: judul,
+		ID:      toko.NextID + 1,
+		Judul:   judul,
+		Selesai: false,
 	}
 
 	toko.Daftar = append(toko.Daftar, tugas)
@@ -46,6 +47,12 @@ func TambahTugas(toko *TokoTugas, judul string) (Task, error) {
 }
 
 func LihatTugas(toko *TokoTugas, id int) (Task, error) {
+
+	for _, tugas := range toko.Daftar {
+		if tugas.ID == id {
+			return tugas, nil
+		}
+	}
 	panic("belum diimplementasikan")
 }
 
