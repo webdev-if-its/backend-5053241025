@@ -90,13 +90,23 @@ func RingkasanPesanan(qty []int, hargaSatuan []float64, tarifPajak float64) stri
 // TODO(Level 9): signature ini SUDAH benar (cari tahu sendiri kenapa
 // bentuknya begini - lihat SOAL.md) - tinggal implementasikan isinya.
 func Total(harga ...float64) float64 {
-	panic("belum diimplementasikan")
+	var total float64
+	for _, nilai := range harga {
+		total += nilai
+	}
+	return total
 }
 
 // TODO(Level 10, bonus): signature ini SUDAH benar (cari tahu sendiri
 // kenapa ada dua nilai balik - lihat SOAL.md) - tinggal implementasikan isinya.
 func HitungOngkosKirim(beratKg float64, jarakKm float64) (float64, error) {
-	panic("belum diimplementasikan")
+	if beratKg < 0 || jarakKm < 0 {
+		return 0, fmt.Errorf("berat dan jarak tidak boleh negatif")
+	}
+
+	const tarifPerKg = 5000.0
+	const tarifPerKm = 1000.0
+	return beratKg*tarifPerKg + jarakKm*tarifPerKm, nil
 }
 
 func main() {
