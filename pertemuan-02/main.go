@@ -1,16 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // TODO(Level 1): lihat SOAL.md untuk kontrak lengkap tiap fungsi di bawah.
 // Ganti setiap "panic" dengan implementasi yang benar.
 
 func HitungSubtotal(qty int, hargaSatuan float64) float64 {
-	var quantity = qty
-	var harga = hargaSatuan
-
-	var total int = quantity * int(harga)
-	return float64(total)
+	return float64(qty) * hargaSatuan
 }
 
 func HitungTotalPesanan(qty []int, hargaSatuan []float64) float64 {
@@ -100,13 +99,12 @@ func Total(harga ...float64) float64 {
 // TODO(Level 10, bonus): signature ini SUDAH benar (cari tahu sendiri
 // kenapa ada dua nilai balik - lihat SOAL.md) - tinggal implementasikan isinya.
 func HitungOngkosKirim(beratKg float64, jarakKm float64) (float64, error) {
-	if beratKg < 0 || jarakKm < 0 {
-		return 0, fmt.Errorf("berat dan jarak tidak boleh negatif")
+	if beratKg <= 0 || jarakKm <= 0 {
+		return 0, errors.New("berat dan jarak tidak boleh negatif")
 	}
 
-	const tarifPerKg = 5000.0
-	const tarifPerKm = 1000.0
-	return beratKg*tarifPerKg + jarakKm*tarifPerKm, nil
+	// Tarif dasar pengiriman: Rp10.000 per kilogram dan Rp1.000 per kilometer.
+	return (beratKg * 2000.0) + (jarakKm * 3000.0), nil
 }
 
 func main() {
